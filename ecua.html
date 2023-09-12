@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Mapbox Project</title>
+        <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <link rel="stylesheet" href="style.css">
+        <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+        <style>
+            body { margin-top: 50px; margin-left: 280px;padding: 0; }
+            #map { position: relative; width: 850px; height: 650px; }
+        </style>
+        </head>
+        <body>
+        <style>
+            .mapboxgl-popup {
+                max-width: 400px;
+                font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+            }
+        </style>
+<style>
+    .mapboxgl-popup {
+        max-width: 400px;
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    }
+</style>
+<div id="map"></div>
+<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoibWhyMTIzNCIsImEiOiJja2VoNGNmMjMwN2cxMnhtcDhmczhkejk1In0.rV_j8ObNnxnglm1YuwdNtw';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [-75.0152, -11.1900,],
+        zoom: 4.1
+    });
+
+    map.on('load', function() {
+
+        map.addSource('places', {
+            'type': 'geojson',
+            'data': {
+                'type': 'FeatureCollection',
+                'features': [
+                    {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Macchu Picchu</strong><p> Machu Picchu is an Incan citadel that sits on the Andes Mountains in Peru,  built in the 15th century. Its exact use remains a mystery to this day.</p>',
+                            'icon': 'monument'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-72.4973, -13.2263]
+                                }
+                            },
+                            {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Cusco, the capital of the Incan Empire</strong><p> Machu Picchu is an Incan citadel that sits on the Andes Mountains in Peru,  built in the 15th century. Its exact use remains a mystery to this day.</p>',
+                            'icon': 'town-hall'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-71.984978, -13.529427]
+                                }
+                            },
+                            {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Ingapirca</strong><p> Machu Picchu is an Incan citadel that sits on the Andes Mountains in Peru,  built in the 15th century. Its exact use remains a mystery to this day.</p>',
+                            'icon': 'monument'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-78.87188000, -2.548588000]
+                                }
+                            },
+                            {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Pilkukayna</strong><p> Machu Picchu is an Incan citadel that sits on the Andes Mountains in Peru,  built in the 15th century. Its exact use remains a mystery to this day.</p>',
+                            'icon': 'monument'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-69.14423, -16.04864]
+                                }
+                            },
+                            {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Pachacamac</strong><p> Machu Picchu is an Incan citadel that sits on the Andes Mountains in Peru,  built in the 15th century. Its exact use remains a mystery to this day.</p>',
+                            'icon': 'monument'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-76.8539, -12.2095]
+                                }
+                            },
+                            {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Huanaco Pampa</strong><p> Machu Picchu is an Incan citadel that sits on the Andes Mountains in Peru,  built in the 15th century. Its exact use remains a mystery to this day.</p>',
+                            'icon': 'monument'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-76.8128, -9.8753]
+                                }
+                            },
+                            {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Choquequirao</strong><p> Machu Picchu is an Incan citadel that sits on the Andes Mountains in Peru,  built in the 15th century. Its exact use remains a mystery to this day.</p>',
+                            'icon': 'monument'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-72.8722, -13.3950]
+                                }
+                            },
+                            {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Isla del Sol</strong><p> Machu Picchu is an Incan citadel that sits on the Andes Mountains in Peru,  built in the 15th century. Its exact use remains a mystery to this day.</p>',
+                            'icon': 'monument'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-69.1780, -16.0172]
+                                }
+                            },
+                            {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Pumapungo</strong><p> Machu Picchu is an Incan citadel that sits on the Andes Mountains in Peru,  built in the 15th century. Its exact use remains a mystery to this day.</p>',
+                            'icon': 'monument'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-78.9968, -2.9061]
+                                }
+                            },
+                            {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Rumicucho</strong><p> Machu Picchu is an Incan citadel that sits on the Andes Mountains in Peru,  built in the 15th century. Its exact use remains a mystery to this day.</p>',
+                            'icon': 'monument'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-78.4313, 0.0112]
+                                }
+                            },
+                            {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Fuerte de Samaipata</strong><p> Machu Picchu is an Incan citadel that sits on the Andes Mountains in Peru,  built in the 15th century. Its exact use remains a mystery to this day.</p>',
+                            'icon': 'castle'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-63.8205, -18.1786]
+                                }
+                            },
+                            {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Pumapunku</strong><p> Machu Picchu is an Incan citadel that sits on the Andes Mountains in Peru,  built in the 15th century. Its exact use remains a mystery to this day.</p>',
+                            'icon': 'monument'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-68.6801, -16.5617]
+                                }
+                            },
+                            {
+                        'type': 'Feature',
+                        'properties': {
+                            'description':
+                                '<strong>Tucume</strong><p> Machu Picchu is an Incan citadel that sits on the Andes Mountains in Peru,  built in the 15th century. Its exact use remains a mystery to this day.</p>',
+                            'icon': 'place-of-worship'
+                        },
+                        'geometry': {
+                            'type': 'Point',
+                            'coordinates': [-79.8465, -6.5130]
+                                }
+                            },
+                        ]
+                    }
+                });
+                // Add a layer showing the places.
+                map.addLayer({
+                    'id': 'places',
+                    'type': 'symbol',
+                    'source': 'places',
+                    'layout': {
+                        'icon-image': '{icon}-15',
+                        'icon-allow-overlap': true
+                    }
+                });
+        
+                // When a click event occurs on a feature in the places layer, open a popup at the
+                // location of the feature, with description HTML from its properties.
+                map.on('click', 'places', function(e) {
+                    var coordinates = e.features[0].geometry.coordinates.slice();
+                    var description = e.features[0].properties.description;
+        
+                    // Ensure that if the map is zoomed out such that multiple
+                    // copies of the feature are visible, the popup appears
+                    // over the copy being pointed to.
+                    while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                        coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+                    }
+        
+                    new mapboxgl.Popup()
+                        .setLngLat(coordinates)
+                        .setHTML(description)
+                        .addTo(map);
+                });
+        
+                // Change the cursor to a pointer when the mouse is over the places layer.
+                map.on('mouseenter', 'places', function() {
+                    map.getCanvas().style.cursor = 'pointer';
+                });
+        
+                // Change it back to a pointer when it leaves.
+                map.on('mouseleave', 'places', function() {
+                    map.getCanvas().style.cursor = '';
+                });
+            });
+        </script>
+        
+        </body>
+        </html>
+        
