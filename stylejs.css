@@ -1,0 +1,55 @@
+body{
+	background-color: rgb(255, 222, 249);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.form{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(0, -50%);
+}
+
+#myInput{
+text-transform: capitalize;
+text-align: center;
+width:180px;
+border-color: darkviolet;
+border-width: 1px;
+}
+
+#restart{
+    border-color: darkviolet;
+    border-width: 1px;
+    bottom: 100px;
+    position: absolute;
+    left: 46%;
+    width:100px;
+}
+
+.colors{
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+*{
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+   box-sizing: border-box;
+}
+
+img {
+    width: 1400px; 
+    height: 758px; 
+    object-fit: contain;
+}
+
+iframe {
+    width: 400px; 
+    height: 445px; 
+    position: absolute;
+    left: 35%
+}
