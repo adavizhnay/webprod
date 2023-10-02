@@ -6,8 +6,9 @@
 	// Buttons
 	var playButton = document.getElementById("play-pause");
 	var fast_forward = document.getElementById("ff");
-    var skip = 2;
+    var skip = 5;
     var fast = document.getElementById("fast");
+	var slow = document.getElementById("slow");
 	var muteButton = document.getElementById("mute");
 	var fullScreenButton = document.getElementById("full-screen");
     var intervalRewind;
@@ -19,14 +20,8 @@
 
 
 
-	/*video.playbackRate = 1.0;
-    clearInterval(intervalRewind);*/
-
-   /* playButton.addEventListener("click", function() {
-			// Play the video
-			video.play();
-		
-	});*/
+	video.playbackRate = 1.0;
+    clearInterval(intervalRewind);
 
 	// Event listener for the play/pause button
 	playButton.addEventListener("click", function() {
@@ -57,7 +52,9 @@
 });
 	
 	
-
+	slow.addEventListener("click", function(){
+    document.querySelector('video').playbackRate = 0.25;
+    });
 
     
     fast.addEventListener("click", function(){
@@ -88,13 +85,6 @@
        }
    }, 30);
 }
-
-
-
-
-
- 
-
 
 	//Event listener for mute button
 	muteButton.addEventListener("click",function() {
@@ -143,11 +133,6 @@
 
 		// Update the slider value
 		seekBar.value = value;
-	});
-
-	// Pause the video when the seek handle is being dragged
-	seekBar.addEventListener("mousedown", function() {
-		video.pause();
 	});
 
 	// Play the video when the seek handle is dropped
