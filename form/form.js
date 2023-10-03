@@ -1,18 +1,18 @@
 function getInputValue(){
 
-var inputVal = document.getElementById("myInput").value;
-var bGcolor = document.getElementById("bGcolor").value;
-var rainSound = document.getElementById("rainSound").value;
-var petorNo = document.getElementById("petorNo").value;
-var theBees = document.getElementById("theBees").value;
-var catorNo = document.getElementById("catorNo").value;
+let inputVal = document.getElementById("myInput").value;
+let bGcolor = document.getElementById("bGcolor").value;
+let rainSound = document.getElementById("rainSound").value;
+let petorNo = document.getElementById("petorNo").value;
+let theBees = document.getElementById("theBees").value;
+let catorNo = document.getElementById("catorNo").value;
 
-var day = inputVal;
-var bgc = bGcolor
-var rs = rainSound;
-var pon = petorNo;
-var bees = theBees;
-var con = catorNo;
+let day = inputVal;
+let bgc = bGcolor
+let rs = rainSound;
+let pon = petorNo;
+let bees = theBees;
+let con = catorNo;
 
 if (day === 'morning' || day === 'early morning') {
 document.getElementById("answers").innerHTML= 
@@ -71,7 +71,7 @@ else if(con === 'No' ) {
 
 if (rs === 'Yes') {
     document,getElementById("rainSound")
-    var audio = new Audio('rain.wav');
+    let audio = new Audio('rain.wav');
     audio.play();
     }
 else if(rs === 'No' ) {
