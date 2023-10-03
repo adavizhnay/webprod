@@ -5,10 +5,10 @@
 
 	// Buttons
 	var playButton = document.getElementById("play-pause");
-	var fast_forward = document.getElementById("ff");
-    var skip = 5;
+    var faster = document.getElementById("faster");
     var fast = document.getElementById("fast");
 	var slow = document.getElementById("slow");
+	var slower = document.getElementById("slower");
 	var muteButton = document.getElementById("mute");
 	var fullScreenButton = document.getElementById("full-screen");
     var intervalRewind;
@@ -44,18 +44,19 @@
 
 
 
-	fast_forward.addEventListener("click", function(){
+	faster.addEventListener("click", function(){
+			document.querySelector('video').playbackRate = 5.0;
+			});
 
-		video.currentTime += skip;// takes current time and adds "value" to it
-
-	
-});
 	
 	
 	slow.addEventListener("click", function(){
-    document.querySelector('video').playbackRate = 0.25;
+    document.querySelector('video').playbackRate = 0.45;
     });
 
+	slower.addEventListener("click", function(){
+		document.querySelector('video').playbackRate = 0.1;
+		});
     
     fast.addEventListener("click", function(){
     document.querySelector('video').playbackRate = 2.0;
@@ -65,7 +66,7 @@
 
     reverse.addEventListener("click", function(){
     //button function for rewind
-     playback(1.0);
+     playback(.50);
     });
 
     function playback(rewindSpeed) {    
