@@ -1,0 +1,77 @@
+*{
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+   box-sizing: border-box;
+}
+
+body{
+	background-color: rgb(255, 222, 249);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.form{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    margin: auto;
+    width: 100%;
+    display: inline-block;
+    /* transform: translate(0, -50%); */
+}
+
+
+#prompts{
+    display: none;
+    text-align: center;
+    top: 20%;
+    position: absolute;
+    vertical-align: middle;
+    width: 20%;
+}
+
+.input{
+text-transform: capitalize;
+text-align: center;
+width:220px;
+border-color: darkviolet;
+border-width: 1px;
+}
+
+#rowt{
+    position: absolute;
+    top: 200px;
+
+}
+
+#restart{
+    border-color: darkviolet;
+    border-width: 1px;
+    bottom: 100px;
+    position: absolute;
+    left: 46%;
+    width:100px;
+}
+
+#answers{
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+
+img {
+    width: 1400px; 
+    height: 758px; 
+    object-fit: contain;
+}
+
+iframe {
+    width: 400px; 
+    height: 445px; 
+    position: absolute;
+    left: 35%
+}
+
+  

@@ -90,8 +90,6 @@
 	muteButton.addEventListener("click",function() {
 		if (video.muted == false){ // if the volume is on
              video.muted = true;// mute the video
-
-
 		}else{
 			//Unmute the video
 			video.muted=false;
